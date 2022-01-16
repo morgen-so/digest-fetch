@@ -1,8 +1,10 @@
-process.env.NO_DEPRECATION = 'digest-fetch';
+import { describe, it } from "https://raw.githubusercontent.com/cloudydeno/deno-jmespath/main/test/deno-shim.js";
+import { assertEquals } from "https://deno.land/std@0.120.0/testing/asserts.ts";
+const assert = {
+  equal: assertEquals,
+};
 
-var after = require('after')
-var assert = require('assert')
-var DigestFetch = require('../')
+import { DigestClient as DigestFetch } from "../lib/mod.ts";
 
 describe('digest-fetch', function(){
   it('get function', function(){
